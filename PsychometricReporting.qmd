@@ -167,7 +167,7 @@ n = `r nrow(psych::bfi)` [({{< iconify mdi:arrow-left-bold >}} pssstt {{< iconif
 (@) Psychometric content:  
     + [Scale alphas](#alpha)
     + [Response distributions](#hists)
-    + [Cross--references](#crossref)
+(@) [Cross--references](#crossref)
 (@) [Bibliography](#bib) 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
@@ -284,8 +284,8 @@ This report summarizes responses from...
 3. Psychometric content:  
     + [Scale alphas](#alpha)
     + [Response distributions](#hists)
-    + [Cross--references](#crossref)
-4. [Bibliography](#bib) 
+4. [Cross--references](#crossref)
+5. [Bibliography](#bib) 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
@@ -337,8 +337,8 @@ Your reported $\alpha$ will NOT be rounded -- we can revisit (time permitting) {
 3. Psychometric content:  
     + [Scale alphas](#alpha) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
     + [Response distributions](#hists)
-    + [Cross--references](#crossref)
-4. [Bibliography](#bib) 
+4. [Cross--references](#crossref)
+5. [Bibliography](#bib) 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
@@ -387,8 +387,8 @@ knitr::kable(table[,c(2,3,4,8,9,11,12)])
 3. Psychometric content:  
     + [Scale alphas](#alpha) {{< iconify streamline-ultimate-color:check >}}
     + [Response distributions](#hists) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
-    + [Cross--references](#crossref)
-4. [Bibliography](#bib) 
+4. [Cross--references](#crossref)
+5. [Bibliography](#bib) 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
@@ -409,7 +409,7 @@ Look at line #34 in your .qmd {{< iconify fluent-emoji-flat:eyes >}}
 Call it up via inline code:
 
 ```
-check out @sec-people
+@sec-people talks about respondents
 ```
 
 :::
@@ -438,8 +438,8 @@ Try this:
 3. Psychometric content: [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
     + [Scale alphas](#alpha) {{< iconify streamline-ultimate-color:check >}}
     + [Response distributions](#hists) {{< iconify streamline-ultimate-color:check >}}
-    + [Cross--references](#crossref) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
-4. [Bibliography](#bib) 
+4. [Cross--references](#crossref) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+5. [Bibliography](#bib) 
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
@@ -492,8 +492,8 @@ see the work of @young2021analysis
 3. Psychometric content: {{< iconify streamline-ultimate-color:check >}}  
     + [Scale alphas](#alpha) {{< iconify streamline-ultimate-color:check >}}
     + [Response distributions](#hists) {{< iconify streamline-ultimate-color:check >}}
-    + [Cross--references](#crossref) {{< iconify streamline-ultimate-color:check >}}
-4. [Bibliography](#bib) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+4. [Cross--references](#crossref) {{< iconify streamline-ultimate-color:check >}}
+5. [Bibliography](#bib) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
