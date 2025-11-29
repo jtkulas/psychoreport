@@ -1,0 +1,517 @@
+---
+title: "Psychometric Reporting..."
+author: "<br><br>...with [{{< iconify devicon:r >}}]{.bigger} and Quarto"
+title-slide-attributes: 
+  data-background-image: https://cdn.prod.website-files.com/5fda9e054c8f10649883f27d/64f78ee1d49618f094e64111_vationventures_datascience.jpeg
+#  data-background-opacity: ".8"
+format:
+  revealjs: 
+    code-copy: true       ## static clipboard in displayed code blocks
+    mouse-wheel: true
+    theme: prezi.scss
+    logo: img/background-removebg-preview.png #https://cdn-icons-png.flaticon.com/512/5408/5408783.png
+    multiplex: true
+code-annotations: hover
+execute:
+  eval: false
+---
+
+## &nbsp;&nbsp;&nbsp;Report Formats
+
+::: {.absolute style="top: -10px; right: -140px; width: 350px;" .tilt2}
+<a href="https://github.com/nmfs-opensci/quarto_titlepages/blob/main/example_1.pdf">
+  <img src="https://quarto.org/docs/gallery/articles/articles-pdf.png">
+</a>
+:::
+
+::: {.absolute style="bottom: 0px; left: -100px; width: 380px;" .tilt2}
+<a href="https://quarto-dev.github.io/quarto-gallery/page-layout/tufte.html">
+  <img src="https://www.slideteam.net/media/catalog/product/cache/1280x720/c/u/customer_satisfaction_survey_feedback_report_for_ecommerce_website_slide01.jpg">
+</a>
+:::
+
+::: {.absolute style="top: 80px; left: -120px; width: 350px;" .tilt}
+<a href="https://quarto.org/docs/dashboards/">
+  <img src="https://quarto.org/docs/dashboards/examples/thumbnails/stock-explorer-dashboard.png">
+</a>
+:::
+
+::: {.absolute style="bottom: -20px; right: -100px; width: 285px;" .tilt}
+<a href="https://wjschne.github.io/apaquarto/">
+  <img src="https://s3.amazonaws.com/libapps/accounts/5770/images/psy_empirical.jpg">
+</a>
+:::
+
+::: {.absolute style="bottom: 100px; left: 240px; width: 650px;"}
+<a href="https://github.com/quarto-ext/typst-templates/tree/main/poster">
+  <img src="https://quarto.org/docs/blog/posts/2024-01-24-1.4-release/images/typst-format-poster.png">
+</a>
+:::
+
+## Software Installations
+
+<br>
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+### Authoring:
+
+[{{< iconify material-icon-theme:quarto size=9x >}}](https://quarto.org/docs/download/)
+
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="30%"}
+
+### Language:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[{{< iconify devicon:r size=5x >}}](https://cran.r-project.org/)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[{{< iconify devicon:python-wordmark size=3x >}}](https://www.python.org/downloads/)]{.fragment fragment-index=1}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[[{{< iconify logos:julia size=2x >}}](https://julialang.org/install/)]{.fragment fragment-index=2}
+
+:::
+
+::: {.column width="5%"}
+
+:::
+
+::: {.column width="30%"}
+
+### Interface:
+
+[{{< iconify devicon:rstudio size=5x >}}](https://posit.co/downloads/)<br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[{{< iconify eos-icons:atom-electron size=2x style="color:white" >}}](https://positron.posit.co/){.fragment fragment-index=3}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;[{{< iconify devicon:jupyter-wordmark size=3x >}}[lab]{.juplab}](https://jupyter.org/install){.fragment fragment-index=4}
+:::
+
+:::
+
+::: {.notes}
+
+1. location of software installation should not matter (select PATH if given the option)
+2. other languages are permissable ([Python](https://www.python.org/downloads/) & [Julia](https://julialang.org/install/) currently popular)
+3. other IDEs are permissable ([VS Code](https://code.visualstudio.com/download), [Positron](https://positron.posit.co/), and [JupyterLab](https://jupyter.org/install) currently popular)
+
+:::
+
+## 2 Types of Report Content
+
+::: {.columns}
+
+::: {.column width="50%" .fragment .semi-fade-out fragment-index=1}
+### Narrative:
+
+[**plain--text**]{.underline} = written in prose (same as any word processor) with formatting indicated by [markdown](https://quarto.org/docs/authoring/markdown-basics.html)^[or (possibly) [$\LaTeX$](https://www.latex-project.org/) if generating a {{< iconify vscode-icons:file-type-pdf2 >}}]:
+
+```
+# 1^st^ level heading 
+
+## 2^nd^ level Heading
+
+this is **bold**
+this is *italic*
+
+```
+
+:::
+
+::: {.column width="50%" .fragment .fade-in fragment-index=1}
+### Computational:{#chunks}
+
+occurs in [**chunks**]{.underline} -- isolated bits of code indicated with either one ([inline](https://quarto.org/docs/computations/inline-code.html)) or three ([code block](https://quarto.org/docs/output-formats/html-code.html)) "ticks":
+
+```{r}                   
+#| echo: fenced
+
+library(ggplot2)         #<1>
+
+# Basic scatter plot    #<2>  
+ggplot(mtcars, aes(
+  x=wt, y=mpg)) + 
+  geom_point()
+```
+1. any {{< iconify devicon:r >}} command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)
+2. comments{{< iconify ant-design:comment-outlined >}} also operational within code chunks 
+:::
+
+:::
+
+# Let's build a [tech report](https://quarto.org/docs/visual-editor/technical.html)!!!
+
+![](https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3bmcyMDE5d2l0YmpjM3BrNzlnaXdzcGJqa3dyZzl3ZnFpemU2NjYxbSZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/13Qtb1Tl4eqISI9j4j/giphy.gif)
+
+## Example Measure & Data {#example}
+
+[BFI dataset](https://www.rdocumentation.org/packages/psych/versions/2.2.3/topics/bfi) (from `psych` package):
+
+```{r}
+#| echo: false
+#| eval: true
+
+psych::bfi.dictionary[,c(2,4,6)]
+      
+```
+
+n = `r nrow(psych::bfi)` [({{< iconify mdi:arrow-left-bold >}} pssstt {{< iconify devicon:r >}} reported this number via [`inline code`](#chunks))]{.smaller}
+
+## Build Components (Today)
+
+(@) Table of Contents 
+(@) [Template](#template)
+(@) Psychometric content:  
+    + [Scale alphas](#alpha)
+    + [Response distributions](#hists)
+    + [Cross--references](#crossref)
+(@) [Bibliography](#bib) 
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
+
+## Empty Report Shell {#template}
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+1. Create `New Project...` from within {{< iconify devicon:rstudio >}}
+2. `New File`{{< iconify maki:arrow >}}`Quarto Document`  
+3. Render boilerplate document
+4. Use clipboard ({{< iconify streamline:empty-clipboard >}}) to paste window content into your .qmd
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: true
+---
+title: "SCSU 2025 Psychometrics Report"
+author: "I.M. Ah--sum"
+title-block-banner: "#4caad8"       #<1>
+date: today                         #<2>
+format: 
+  html:
+    theme:
+      light: default                #<3>
+      dark: darkly                  #<3>
+toc: true
+toc-location: left
+execute:
+  echo: false                       #<4>
+  warning: false
+  message: false                    #<4>
+#bibliography: bib.bib
+#csl: apa7.csl
+---
+
+# Introduction
+::: {style="overflow: auto;"}
+
+[![](https://www.stcloudstate.edu/ucomm/_files/images/300x300_stc.png){style="float: right; margin-left: 1em; width: 40%;"}](https://www.stcloudstate.edu/graduate/io-psy/default.aspx)
+
+This report summarizes responses from... 
+
+>Note: any caveats here
+
+:::
+
+# Method
+
+## Participants {#sec-people}
+
+## Materials
+
+# Results
+
+# Conclusions & Summary
+
+## Future considerations
+
+## Limitations
+
+# References
+```
+1. Choose [any color](https://htmlcolorcodes.com/color-picker/) you like {{< iconify emojione:rainbow >}}
+2. Either enter static date or allow {{< iconify devicon:r >}} to auto--update to "whenever you last ran this script" with `date: today`
+3. You can either customize however you like or choose from [25 built--in themes](https://quarto.org/docs/output-formats/html-themes.html)
+4. Controls chunk reporting activity -- helps keep report "clean" (you can toggle to recieve feedback when you want it)
+
+:::
+
+:::
+
+![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="-10" left="350" width="200" .tilt}
+
+## Build Component Status: [{{< iconify fa7-solid:battery-0 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
+
+1. Table of Contents [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+2. [Template](#template) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+3. Psychometric content:  
+    + [Scale alphas](#alpha)
+    + [Response distributions](#hists)
+    + [Cross--references](#crossref)
+4. [Bibliography](#bib) 
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
+
+## Scale Alphas {#alpha}
+
+::: {.columns}
+
+::: {.column width="55%"}
+
+1. Understand code chunk (aka script) elements &nbsp;&nbsp;{{< iconify maki:arrow >}}
+2. Copy chunk (hit {{< iconify streamline:empty-clipboard >}}) & paste into "Results" section of template report
+3. Ask for Chronbach's $\alpha$ by using inline code:
+    + Copy spec on line #12 somewhere OUTSIDE of chunk
+    
+:::
+
+::: {.column width="45%"}
+
+```{r}
+#| echo: fenced
+
+library(psych)
+
+bfi$A1 <- 7-bfi$A1    #<1>
+
+agree <- alpha(bfi[1:5]) #<2>
+
+## Chronbach's stored in
+## agree$total
+
+## request by typing:
+## `r agree$total$raw_alpha`
+```
+1. Reflecting `A1` as indicated on [scoring key](#example)
+2. Indexing quickest way to subset, but be careful (make sure to check output, even if you don't eventually include in report)
+
+::: {.callout-note}
+Your reported $\alpha$ will NOT be rounded -- we can revisit (time permitting) {{< iconify svg-spinners:clock >}}
+:::
+
+:::
+
+:::
+
+## Build Component Status: [{{< iconify fa7-solid:battery-2 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
+
+1. Table of Contents {{< iconify streamline-ultimate-color:check >}}
+2. [Template](#template) {{< iconify streamline-ultimate-color:check >}}
+3. Psychometric content:  
+    + [Scale alphas](#alpha) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+    + [Response distributions](#hists)
+    + [Cross--references](#crossref)
+4. [Bibliography](#bib) 
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
+
+## Item Response Distributions {#hists}
+
+Not all that interesting but worth looking into, we'll do histograms as well as a table...
+
+::: {.columns}
+
+::: {.column width="50%"}
+Copy and place underneath previous ($\alpha$) chunk:^[you want to sequence your chunks similar to a normal script -- early stuff higher]
+
+```{r}
+#| echo: fenced
+#| label: fig-a1
+#| fig-cap: "Basic histogram of responses to BFI item A1"
+
+hist(bfi$A1)
+
+```
+
+:::
+
+::: {.column width="50%" .fragment}
+
+Ditto here (place under histogram chunk)
+
+```{r}
+#| echo: fenced
+##| label: tbl-agree
+##| tbl-cap: "Agreeableness item distribution properties"
+
+table <- describe(bfi[1:5])
+
+knitr::kable(table[,c(2,3,4,8,9,11,12)])
+```
+
+:::
+
+:::
+
+## Build Component Status: [{{< iconify fa7-solid:battery-3 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
+
+1. Table of Contents {{< iconify streamline-ultimate-color:check >}}
+2. [Template](#template) {{< iconify streamline-ultimate-color:check >}}
+3. Psychometric content:  
+    + [Scale alphas](#alpha) {{< iconify streamline-ultimate-color:check >}}
+    + [Response distributions](#hists) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+    + [Cross--references](#crossref)
+4. [Bibliography](#bib) 
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
+
+## Cross--referencing... {#crossref}
+
+...can be done to just about any report element...
+
+::: {.columns}
+
+::: {.column width="50%" .fragment fragment-index=1}
+
+### Sections
+
+Look at line #34 in your .qmd {{< iconify fluent-emoji-flat:eyes >}}  
+
++ `{#sec-people}` is a [tag](https://quarto.org/docs/authoring/cross-references.html#overview) with a special prefix
+
+Call it up via inline code:
+
+```
+check out @sec-people
+```
+
+:::
+
+::: {.column width="50%" .fragment fragment-index=2}
+
+### Output
+
+[***Of course***]{.underline} you can also cross--reference data (and summaries such as figures and tables)...
+
+<br>
+Try this:
+
+```
+@fig-a1 is kinda lame
+```
+
+:::
+
+:::
+
+## Build Component Status: [{{< iconify fa7-solid:battery-4 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
+
+1. Table of Contents {{< iconify streamline-ultimate-color:check >}}
+2. [Template](#template) {{< iconify streamline-ultimate-color:check >}}
+3. Psychometric content: [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+    + [Scale alphas](#alpha) {{< iconify streamline-ultimate-color:check >}}
+    + [Response distributions](#hists) {{< iconify streamline-ultimate-color:check >}}
+    + [Cross--references](#crossref) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+4. [Bibliography](#bib) 
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
+
+## Bibliography {#bib}
+
+Will auto--update as you add references to your report (keep candidate references in a `.bib` file in your project folder)
+
+:::{.columns}
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+@article{young2021analysis,
+  title={An analysis of training and vocational rehabilitation services for individuals with intellectual disability},
+  author={Young Illies, Marcy and Valentini, Brian J and Ingles, Kristina E and Gilson, Carly B},
+  journal={Journal of Vocational Rehabilitation},
+  volume={55},
+  number={2},
+  pages={219--225},
+  year={2021},
+  publisher={SAGE Publications Sage UK: London, England}
+}
+```
+
+\*[{{< iconify academicons:google-scholar-square >}}](https://scholar.google.com/) provides this format 
+
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="46%" .smaller}
+1. Copy and paste the left--hand citation into a "bib.bib" file
+2. Delete the "{{< iconify ph:hash >}}" on line 17 of your .qmd
+
+Call out reference in paper: 
+
+```
+see the work of @young2021analysis
+```
+
+:::
+
+:::
+
+## Build Component Status: [{{< iconify fa7-solid:battery-5 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
+
+1. Table of Contents {{< iconify streamline-ultimate-color:check >}}
+2. [Template](#template) {{< iconify streamline-ultimate-color:check >}}
+3. Psychometric content: {{< iconify streamline-ultimate-color:check >}}  
+    + [Scale alphas](#alpha) {{< iconify streamline-ultimate-color:check >}}
+    + [Response distributions](#hists) {{< iconify streamline-ultimate-color:check >}}
+    + [Cross--references](#crossref) {{< iconify streamline-ultimate-color:check >}}
+4. [Bibliography](#bib) [{{< iconify streamline-ultimate-color:check >}}]{.fragment fragment-index=1}
+
+![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
+
+## "Getting Started" Resources
+
+<br>
+
+::: {.columns}
+
+::: {.column width="50%"}
+
+### Slides [{{< iconify vscode-icons:file-type-powerpoint2 >}}](https://jtkulas.github.io/MPPAW2023)
+
+<iframe src="https://jtkulas.github.io/MPPAW2023" width="100%"  height="380"> 
+</iframe>
+::: 
+
+::: {.column width="50%"}
+
+### Video [{{< iconify logos:youtube-icon >}}](https://youtu.be/69TrX-mTYOg?si=YDLQEQOBXsxzcxHm)
+
+<iframe src="https://www.youtube.com/embed/69TrX-mTYOg?si=p4imSXKVAxD0CA1j" width="100%" height="380"> </iframe>
+
+:::
+
+:::
+
+## Keep in Touch
+
+::: {.columns}
+
+::: {.column width="40%"}
+:::
+
+::: {.column width="60%"}
+
+::: {.crete .bigger}
+
+<br>
+
+{{< iconify logos:youtube-icon >}} [@forensicpsychometrics](https://www.youtube.com/@forensicpsychometrics8300)<br>
+{{< iconify skill-icons:linkedin >}} [@John Kulas](https://www.linkedin.com/in/johntkulas/)<br>
+{{< iconify devicon:twitter >}} [@jtkulas](https://x.com/jtkulas)<br>
+{{< iconify tabler:world-www style="color: #79baec;">}} [eRg](https://ergreports.com/)<br>
+{{< iconify icon-park:email-block >}} [jtkulas@ergreports.com](mailto: jtkulas@ergreports.com)
+
+:::
+:::
+:::
+
+![](https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGNrMHpqdXVlbjFvcWsxbmV2Z3Z2ampjajE1ZzdvNHQ4MXVtNXIybyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cluiY1nMoHWd9o6Uej/giphy.gif){.absolute left="-100" bottom="70"}
