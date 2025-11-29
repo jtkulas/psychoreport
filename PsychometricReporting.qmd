@@ -172,20 +172,45 @@ n = `r nrow(psych::bfi)` [({{< iconify mdi:arrow-left-bold >}} pssstt {{< iconif
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
-## Empty Report Shell {#template}
+## FIRST -- let's set up your Workspace...  
 
 ::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="47%"}
 
-1. Create `New Project...` from within {{< iconify devicon:rstudio >}}
-2. `New File`{{< iconify maki:arrow >}}`Quarto Document`  
-3. Render boilerplate document
-4. Use clipboard ({{< iconify streamline:empty-clipboard >}}) to paste window content into your .qmd
+[1. From within {{< iconify devicon:rstudio >}}, select `File`{{< iconify maki:arrow >}}`New Project...`]{.fragment .fade-in-then-semi-out fragment-index=1}  
+[2. `New Directory`{{< iconify maki:arrow >}}]{.fragment .fade-in-then-semi-out fragment-index=2}  
+[3. `New Project`{{< iconify maki:arrow >}}]{.fragment .fade-in-then-semi-out fragment-index=3}  
+[4. Provide a name for your directory (let's call it "report") & select `Create Project`]{.fragment .fade-in-then-semi-out fragment-index=4}  
 
 :::
 
 ::: {.column width="50%"}
+
+:::
+
+:::
+
+[![](img/project1.png){.absolute right="-130" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=1}
+[![](img/project2.png){.absolute right="-130" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=2}
+[![](img/project3.png){.absolute right="-130" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=3}
+[![](img/project4.png){.absolute right="-130" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=4}
+
+## Empty Report Shell {#template}
+
+::: {.columns}
+
+::: {.column width="45%" .smaller}
+
+1. Create a boilerplate Quarto html document:  
+    + `File`{{< iconify maki:arrow >}}`New File`[{{< iconify maki:arrow >}}`Quarto Document`]{.fragment fragment-index=1}[{{< iconify maki:arrow >}}`HTML`{{< iconify maki:arrow >}}`Create`]{.fragment fragment-index=2}  
+
+[2. Verify everything "works" -- render/save within project folder]{.fragment fragment-index=3}  
+[3. Use clipboard ({{< iconify streamline:empty-clipboard >}}) to replace content & re--render]{.fragment fragment-index=5}
+
+:::
+
+::: {.column width="55%" .fragment fragment-index=5}
 
 ```{r}
 #| echo: true
@@ -245,7 +270,12 @@ This report summarizes responses from...
 
 :::
 
-![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="-10" left="350" width="200" .tilt}
+![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="-20" left="360" width="200" .fragment fragment-index=5}
+
+[![](img/file1.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-out fragment-index=1}
+[![](img/file2.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=1}
+[![](img/file3.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=2}
+[![](img/file4.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=3}
 
 ## Build Component Status: [{{< iconify fa7-solid:battery-0 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
 
@@ -265,7 +295,7 @@ This report summarizes responses from...
 
 ::: {.column width="55%"}
 
-1. Understand code chunk (aka script) elements &nbsp;&nbsp;{{< iconify maki:arrow >}}
+1. Understand code chunk (aka script) elements &nbsp;&nbsp;{{< iconify maki:arrow >}} 
 2. Copy chunk (hit {{< iconify streamline:empty-clipboard >}}) & paste into "Results" section of template report
 3. Ask for Chronbach's $\alpha$ by using inline code:
     + Copy spec on line #12 somewhere OUTSIDE of chunk
