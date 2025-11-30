@@ -480,7 +480,7 @@ age                                     age in years                &lt;NA&gt;  
 <li>Copy chunk (hit <iconify-icon role="img" inline="" icon="streamline:empty-clipboard" aria-label="Icon empty-clipboard from streamline Iconify.design set." title="Icon empty-clipboard from streamline Iconify.design set."></iconify-icon>) &amp; paste into “Results” section of template report</li>
 <li>Ask for Chronbach’s <span class="math inline">\(\alpha\)</span> by using inline code:
 <ul>
-<li>Copy spec on line #12 somewhere OUTSIDE of chunk</li>
+<li>Copy spec on line #12 into Results section (but OUTSIDE of chunk)</li>
 </ul></li>
 </ol>
 </div><div class="column" style="width:45%;">
@@ -543,10 +543,10 @@ age                                     age in years                &lt;NA&gt;  
 </section>
 <section id="hists" class="slide level2">
 <h2>Item Response Distributions</h2>
-<p>Not all that interesting but worth looking into, we’ll do histograms as well as a table…</p>
+<p>Not all that interesting but worth looking into, we’ll do one histogram as well as a table…</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>Copy and place underneath previous (<span class="math inline">\(\alpha\)</span>) chunk:<sup>1</sup></p>
+<p>Copy (<iconify-icon role="img" inline="" icon="streamline:empty-clipboard" aria-label="Icon empty-clipboard from streamline Iconify.design set." title="Icon empty-clipboard from streamline Iconify.design set."></iconify-icon>) and place underneath previous (<span class="math inline">\(\alpha\)</span>) chunk:<sup>1</sup></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href=""></a><span class="in">```{r}</span></span>
 <span id="cb3-2"><a href=""></a><span class="co">#| label: fig-a1</span></span>
@@ -556,7 +556,7 @@ age                                     age in years                &lt;NA&gt;  
 <span id="cb3-6"><a href=""></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div><div class="column fragment" style="width:50%;">
-<p>Ditto here (place under histogram chunk)</p>
+<p>Ditto here (<iconify-icon role="img" inline="" icon="streamline:empty-clipboard" aria-label="Icon empty-clipboard from streamline Iconify.design set." title="Icon empty-clipboard from streamline Iconify.design set."></iconify-icon> &amp; place under histogram chunk)</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href=""></a><span class="in">```{r}</span></span>
 <span id="cb4-2"><a href=""></a><span class="do">##| label: tbl-agree</span></span>
@@ -592,7 +592,7 @@ age                                     age in years                &lt;NA&gt;  
 <h3 id="sections">Sections</h3>
 <p>Look at line #34 in your .qmd <iconify-icon role="img" inline="" icon="fluent-emoji-flat:eyes" aria-label="Icon eyes from fluent-emoji-flat Iconify.design set." title="Icon eyes from fluent-emoji-flat Iconify.design set."></iconify-icon></p>
 <ul>
-<li><code>{#sec-people}</code> is a <a href="https://quarto.org/docs/authoring/cross-references.html#overview">tag</a> with a special prefix</li>
+<li><code>{#sec-people}</code> is a <strong>tag</strong> with a <a href="https://quarto.org/docs/authoring/cross-references.html#overview">special prefix</a></li>
 </ul>
 <p>Call it up via inline code:</p>
 <pre><code>@sec-people talks about respondents</code></pre>

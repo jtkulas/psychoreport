@@ -298,7 +298,7 @@ This report summarizes responses from...
 1. Understand code chunk (aka script) elements &nbsp;&nbsp;{{< iconify maki:arrow >}} 
 2. Copy chunk (hit {{< iconify streamline:empty-clipboard >}}) & paste into "Results" section of template report
 3. Ask for Chronbach's $\alpha$ by using inline code:
-    + Copy spec on line #12 somewhere OUTSIDE of chunk
+    + Copy spec on line #12 into Results section (but OUTSIDE of chunk)
     
 :::
 
@@ -344,12 +344,12 @@ Your reported $\alpha$ will NOT be rounded -- we can revisit (time permitting) {
 
 ## Item Response Distributions {#hists}
 
-Not all that interesting but worth looking into, we'll do histograms as well as a table...
+Not all that interesting but worth looking into, we'll do one histogram as well as a table...
 
 ::: {.columns}
 
 ::: {.column width="50%"}
-Copy and place underneath previous ($\alpha$) chunk:^[you want to sequence your chunks similar to a normal script -- early stuff higher]
+Copy ({{< iconify streamline:empty-clipboard >}}) and place underneath previous ($\alpha$) chunk:^[you want to sequence your chunks similar to a normal script -- early stuff higher]
 
 ```{r}
 #| echo: fenced
@@ -364,7 +364,7 @@ hist(bfi$A1)
 
 ::: {.column width="50%" .fragment}
 
-Ditto here (place under histogram chunk)
+Ditto here ({{< iconify streamline:empty-clipboard >}} & place under histogram chunk)
 
 ```{r}
 #| echo: fenced
@@ -404,7 +404,7 @@ knitr::kable(table[,c(2,3,4,8,9,11,12)])
 
 Look at line #34 in your .qmd {{< iconify fluent-emoji-flat:eyes >}}  
 
-+ `{#sec-people}` is a [tag](https://quarto.org/docs/authoring/cross-references.html#overview) with a special prefix
++ `{#sec-people}` is a **tag** with a [special prefix](https://quarto.org/docs/authoring/cross-references.html#overview)
 
 Call it up via inline code:
 
