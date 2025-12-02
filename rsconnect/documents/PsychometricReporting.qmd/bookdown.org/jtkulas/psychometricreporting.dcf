@@ -5,7 +5,7 @@ account: jtkulas
 server: bookdown.org
 hostUrl: https://bookdown.org/__api__
 appId: 15689
-bundleId: 109543
+bundleId: 109610
 url: https://bookdown.org/jtkulas/psychometricreporting/
 version: 1
 asMultiple: FALSE

@@ -16,7 +16,7 @@ execute:
   eval: false
 ---
 
-## &nbsp;&nbsp;&nbsp;Report Formats
+## &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report Formats
 
 ::: {.absolute style="top: -10px; right: -140px; width: 350px;" .tilt2}
 <a href="https://github.com/nmfs-opensci/quarto_titlepages/blob/main/example_1.pdf">
@@ -344,7 +344,7 @@ Your reported $\alpha$ will NOT be rounded -- we can revisit (time permitting) {
 
 ## Item Response Distributions {#hists}
 
-Not all that interesting but worth looking into, we'll do one histogram as well as a table...
+Not all that interesting but worth looking into, we'll do one item histogram as well as a multi--item table...
 
 ::: {.columns}
 
@@ -406,7 +406,7 @@ Look at line #34 in your .qmd {{< iconify fluent-emoji-flat:eyes >}}
 
 + `{#sec-people}` is a **tag** with a [special prefix](https://quarto.org/docs/authoring/cross-references.html#overview)
 
-Call it up via inline code:
+Call it up in your report:
 
 ```
 @sec-people talks about respondents
@@ -443,16 +443,28 @@ Try this:
 
 ![](https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif){.absolute right="10" bottom="65"}
 
-## Bibliography {#bib}
+## Bibliography (Setup) {#bib}
 
-Will auto--update as you add references to your report (keep candidate references in a `.bib` file in your project folder)
+Will auto--complete as you add references to your report (you should keep candidate references in a `.bib` file within your project folder)
+
+[1. `File`{{< iconify maki:arrow >}}`New File`]{.fragment .fade-in-then-semi-out fragment-index=1}    
+[2. `New File`{{< iconify maki:arrow >}}`Text File`]{.fragment .fade-in-then-semi-out fragment-index=2}  
+[3. `Save As...` "bib.bib"]{.fragment .fade-in-then-semi-out fragment-index=3}
+
+[![](img/file1.png){.absolute right="-100" top="220" height="450"}]{.fragment .fade-in-then-out fragment-index=1}
+[![](img/bib2.png){.absolute right="-100" top="220" height="450"}]{.fragment .fade-in-then-out fragment-index=2}
+[![](img/bib3.png){.absolute right="-70" top="220" height="450"}]{.fragment .fade-in-then-out fragment-index=3}
+
+## Bibliography (Use) 
+
+Will auto--complete as you add references to your report (you should keep candidate references in a `.bib` file within your project folder)
 
 :::{.columns}
 
 ::: {.column width="50%"}
 ```{r}
 #| echo: true
-@article{young2021analysis,
+@article{young2021analysis,      #<1>
   title={An analysis of training and vocational rehabilitation services for individuals with intellectual disability},
   author={Young Illies, Marcy and Valentini, Brian J and Ingles, Kristina E and Gilson, Carly B},
   journal={Journal of Vocational Rehabilitation},
@@ -463,6 +475,8 @@ Will auto--update as you add references to your report (keep candidate reference
   publisher={SAGE Publications Sage UK: London, England}
 }
 ```
+1. The "key" is how you identify the reference within your report. Here, {{< iconify noto:key >}} = `young2021analysis`. Like [cross--references](#crossref), you precede the citation key with the {{< iconify fa-solid:at >}} symbol.
+
 
 \*[{{< iconify academicons:google-scholar-square >}}](https://scholar.google.com/) provides this format 
 
@@ -472,15 +486,14 @@ Will auto--update as you add references to your report (keep candidate reference
 :::
 
 ::: {.column width="46%" .smaller}
-1. Copy and paste the left--hand citation into a "bib.bib" file
-2. Delete the "{{< iconify ph:hash >}}" on line 17 of your .qmd
+4. Copy and paste the left--hand citation into your "bib.bib" file
+5. Delete the "{{< iconify ph:hash >}}" around/on line 17 of your .qmd
 
-Call out reference in paper: 
+6. Call out within report: 
 
 ```
 see the work of @young2021analysis
 ```
-
 :::
 
 :::

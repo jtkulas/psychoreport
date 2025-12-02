@@ -206,7 +206,7 @@
 
 </section>
 <section id="report-formats" class="slide level2">
-<h2>&nbsp;&nbsp;&nbsp;Report Formats</h2>
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Report Formats</h2>
 <div class="absolute tilt2" style="top: -10px; right: -140px; width: 350px;">
 <p><a href="https://github.com/nmfs-opensci/quarto_titlepages/blob/main/example_1.pdf"> <img src="https://quarto.org/docs/gallery/articles/articles-pdf.png"> </a></p>
 </div>
@@ -543,7 +543,7 @@ age                                     age in years                &lt;NA&gt;  
 </section>
 <section id="hists" class="slide level2">
 <h2>Item Response Distributions</h2>
-<p>Not all that interesting but worth looking into, we’ll do one histogram as well as a table…</p>
+<p>Not all that interesting but worth looking into, we’ll do one item histogram as well as a multi–item table…</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p>Copy (<iconify-icon role="img" inline="" icon="streamline:empty-clipboard" aria-label="Icon empty-clipboard from streamline Iconify.design set." title="Icon empty-clipboard from streamline Iconify.design set."></iconify-icon>) and place underneath previous (<span class="math inline">\(\alpha\)</span>) chunk:<sup>1</sup></p>
@@ -594,7 +594,7 @@ age                                     age in years                &lt;NA&gt;  
 <ul>
 <li><code>{#sec-people}</code> is a <strong>tag</strong> with a <a href="https://quarto.org/docs/authoring/cross-references.html#overview">special prefix</a></li>
 </ul>
-<p>Call it up via inline code:</p>
+<p>Call it up in your report:</p>
 <pre><code>@sec-people talks about respondents</code></pre>
 </div><div class="column fragment" data-fragment-index="2" style="width:50%;">
 <h3 id="output">Output</h3>
@@ -619,31 +619,47 @@ age                                     age in years                &lt;NA&gt;  
 <p><img data-src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExdXZpc29uYnkxbDljZ3hsNW5qanEycTk4aGRzdDVkZWpuYWlzaDJnMyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l0NgQIwNvU9AUuaY0/giphy.gif" class="absolute" style="bottom: 65px; right: 10px; "></p>
 </section>
 <section id="bib" class="slide level2">
-<h2>Bibliography</h2>
-<p>Will auto–update as you add references to your report (keep candidate references in a <code>.bib</code> file in your project folder)</p>
+<h2>Bibliography (Setup)</h2>
+<p>Will auto–complete as you add references to your report (you should keep candidate references in a <code>.bib</code> file within your project folder)</p>
+<p><span class="fragment fade-in-then-semi-out" data-fragment-index="1">1. <code>File</code><iconify-icon role="img" inline="" icon="maki:arrow" aria-label="Icon arrow from maki Iconify.design set." title="Icon arrow from maki Iconify.design set."></iconify-icon><code>New File</code></span><br>
+<span class="fragment fade-in-then-semi-out" data-fragment-index="2">2. <code>New File</code><iconify-icon role="img" inline="" icon="maki:arrow" aria-label="Icon arrow from maki Iconify.design set." title="Icon arrow from maki Iconify.design set."></iconify-icon><code>Text File</code></span><br>
+<span class="fragment fade-in-then-semi-out" data-fragment-index="3">3. <code>Save As...</code> “bib.bib”</span></p>
+<p><span class="fragment fade-in-then-out" data-fragment-index="1"><img data-src="img/file1.png" class="absolute" style="top: 220px; right: -100px; height: 450px; "></span> <span class="fragment fade-in-then-out" data-fragment-index="2"><img data-src="img/bib2.png" class="absolute" style="top: 220px; right: -100px; height: 450px; "></span> <span class="fragment fade-in-then-out" data-fragment-index="3"><img data-src="img/bib3.png" class="absolute" style="top: 220px; right: -70px; height: 450px; "></span></p>
+</section>
+<section id="bibliography-use" class="slide level2">
+<h2>Bibliography (Use)</h2>
+<p>Will auto–complete as you add references to your report (you should keep candidate references in a <code>.bib</code> file within your project folder)</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href=""></a><span class="sc">@</span>article{young2021analysis,</span>
-<span id="cb7-2"><a href=""></a>  title<span class="ot">=</span>{An analysis of training and vocational rehabilitation services <span class="cf">for</span> individuals with intellectual disability},</span>
-<span id="cb7-3"><a href=""></a>  author<span class="ot">=</span>{Young Illies, Marcy and Valentini, Brian J and Ingles, Kristina E and Gilson, Carly B},</span>
-<span id="cb7-4"><a href=""></a>  journal<span class="ot">=</span>{Journal of Vocational Rehabilitation},</span>
-<span id="cb7-5"><a href=""></a>  volume<span class="ot">=</span>{<span class="dv">55</span>},</span>
-<span id="cb7-6"><a href=""></a>  number<span class="ot">=</span>{<span class="dv">2</span>},</span>
-<span id="cb7-7"><a href=""></a>  pages<span class="ot">=</span>{<span class="dv">219</span><span class="sc">--</span><span class="dv">225</span>},</span>
-<span id="cb7-8"><a href=""></a>  year<span class="ot">=</span>{<span class="dv">2021</span>},</span>
-<span id="cb7-9"><a href=""></a>  publisher<span class="ot">=</span>{SAGE Publications Sage UK<span class="sc">:</span> London, England}</span>
-<span id="cb7-10"><a href=""></a>}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="1">1</button><span id="annotated-cell-10-1" class="code-annotation-target"><a href="#annotated-cell-10-1"></a><span class="sc">@</span>article{young2021analysis,</span>
+<span id="annotated-cell-10-2"><a href="#annotated-cell-10-2"></a>  title<span class="ot">=</span>{An analysis of training and vocational rehabilitation services <span class="cf">for</span> individuals with intellectual disability},</span>
+<span id="annotated-cell-10-3"><a href="#annotated-cell-10-3"></a>  author<span class="ot">=</span>{Young Illies, Marcy and Valentini, Brian J and Ingles, Kristina E and Gilson, Carly B},</span>
+<span id="annotated-cell-10-4"><a href="#annotated-cell-10-4"></a>  journal<span class="ot">=</span>{Journal of Vocational Rehabilitation},</span>
+<span id="annotated-cell-10-5"><a href="#annotated-cell-10-5"></a>  volume<span class="ot">=</span>{<span class="dv">55</span>},</span>
+<span id="annotated-cell-10-6"><a href="#annotated-cell-10-6"></a>  number<span class="ot">=</span>{<span class="dv">2</span>},</span>
+<span id="annotated-cell-10-7"><a href="#annotated-cell-10-7"></a>  pages<span class="ot">=</span>{<span class="dv">219</span><span class="sc">--</span><span class="dv">225</span>},</span>
+<span id="annotated-cell-10-8"><a href="#annotated-cell-10-8"></a>  year<span class="ot">=</span>{<span class="dv">2021</span>},</span>
+<span id="annotated-cell-10-9"><a href="#annotated-cell-10-9"></a>  publisher<span class="ot">=</span>{SAGE Publications Sage UK<span class="sc">:</span> London, England}</span>
+<span id="annotated-cell-10-10"><a href="#annotated-cell-10-10"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-10" data-code-lines="1" data-code-annotation="1">The “key” is how you identify the reference within your report. Here, <iconify-icon role="img" inline="" icon="noto:key" aria-label="Icon key from noto Iconify.design set." title="Icon key from noto Iconify.design set."></iconify-icon> = <code>young2021analysis</code>. Like <a href="#/crossref">cross–references</a>, you precede the citation key with the <iconify-icon role="img" inline="" icon="fa-solid:at" aria-label="Icon at from fa-solid Iconify.design set." title="Icon at from fa-solid Iconify.design set."></iconify-icon> symbol.</span>
+</dd>
+</dl>
+</div>
 </div>
 <p>*<a href="https://scholar.google.com/"><iconify-icon role="img" inline="" icon="academicons:google-scholar-square" aria-label="Icon google-scholar-square from academicons Iconify.design set." title="Icon google-scholar-square from academicons Iconify.design set."></iconify-icon></a> provides this format</p>
 </div><div class="column" style="width:4%;">
 
 </div><div class="column smaller" style="width:46%;">
-<ol type="1">
-<li>Copy and paste the left–hand citation into a “bib.bib” file</li>
-<li>Delete the “<iconify-icon role="img" inline="" icon="ph:hash" aria-label="Icon hash from ph Iconify.design set." title="Icon hash from ph Iconify.design set."></iconify-icon>” on line 17 of your .qmd</li>
+<ol start="4" type="1">
+<li><p>Copy and paste the left–hand citation into your “bib.bib” file</p></li>
+<li><p>Delete the “<iconify-icon role="img" inline="" icon="ph:hash" aria-label="Icon hash from ph Iconify.design set." title="Icon hash from ph Iconify.design set."></iconify-icon>” around/on line 17 of your .qmd</p></li>
+<li><p>Call out within report:</p></li>
 </ol>
-<p>Call out reference in paper:</p>
 <pre><code>see the work of @young2021analysis</code></pre>
 </div></div>
 </section>
