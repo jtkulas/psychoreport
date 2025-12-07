@@ -475,7 +475,7 @@ Will auto--complete as you add references to your report (you should keep candid
   publisher={SAGE Publications Sage UK: London, England}
 }
 ```
-1. The "key" is how you identify the reference within your report. Here, {{< iconify noto:key >}} = `young2021analysis`. Like [cross--references](#crossref), you precede the citation key with the {{< iconify fa-solid:at >}} symbol.
+1. The "key" is how you identify the reference within your report. Here, {{< iconify noto:key >}} = `young2021analysis`. Like [cross--references](#crossref), you precede the citation key with the {{< iconify fa-solid:at >}} symbol when referencing.
 
 
 \*[{{< iconify academicons:google-scholar-square >}}](https://scholar.google.com/) provides this format 
@@ -486,7 +486,7 @@ Will auto--complete as you add references to your report (you should keep candid
 :::
 
 ::: {.column width="46%" .smaller}
-4. Copy and paste the left--hand citation into your "bib.bib" file
+4. Copy ({{< iconify streamline:empty-clipboard >}}) and paste the left--hand citation\* into your "bib.bib" file
 5. Delete the "{{< iconify ph:hash >}}" around/on line 17 of your .qmd
 
 6. Call out within report: 
