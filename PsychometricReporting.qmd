@@ -100,14 +100,14 @@ execute:
 
 :::
 
-## 2 Types of Report Content
+## 3 Types of Report Content:
 
-::: {.columns}
+::: {.columns .smaller}
 
-::: {.column width="50%" .fragment .semi-fade-out fragment-index=1}
-### Narrative:
+::: {.column width="33%" .fragment .semi-fade-out fragment-index=1}
+### Narrative
 
-[**plain--text**]{.underline} = written in prose (same as any word processor) with formatting indicated by [markdown](https://quarto.org/docs/authoring/markdown-basics.html)^[or (possibly) [$\LaTeX$](https://www.latex-project.org/) if generating a {{< iconify vscode-icons:file-type-pdf2 >}}]:
+[**plain--text**]{.underline} (as you would specify on a notepad {{< iconify streamline-ultimate-color:paper-write>}}) with formatting indicated by [markdown](https://quarto.org/docs/authoring/markdown-basics.html)^[or (possibly) [$\LaTeX$](https://www.latex-project.org/) if generating a {{< iconify vscode-icons:file-type-pdf2 >}}]:
 
 ```
 # 1^st^ level heading 
@@ -121,10 +121,10 @@ this is *italic*
 
 :::
 
-::: {.column width="50%" .fragment .fade-in fragment-index=1}
-### Computational:{#chunks}
+::: {.column width="34%" .fragment .fade-in-then-semi-out fragment-index=1}
+### Computations{#chunks}
 
-occurs in [**chunks**]{.underline} -- isolated bits of code indicated with either one ([inline](https://quarto.org/docs/computations/inline-code.html)) or three ([code block](https://quarto.org/docs/output-formats/html-code.html)) "ticks":
+isolated bits of code indicated with either one ([inline](https://quarto.org/docs/computations/inline-code.html)) or three ([code block](https://quarto.org/docs/output-formats/html-code.html)) "ticks":
 
 ```{r}                   
 #| echo: fenced
@@ -138,6 +138,27 @@ ggplot(mtcars, aes(
 ```
 1. any {{< iconify devicon:r >}} command you would normally specify within scripts or the console is valid within code chunks (including the loading of packages)
 2. comments{{< iconify ant-design:comment-outlined >}} also operational within code chunks 
+:::
+
+
+::: {.column width="33%" .fragment .fade-in fragment-index=2}
+### YAML{#yaml}
+
+"executive" specifications that control the look and feel of your document -- always located at very top:
+
+```{yaml}                   
+#| echo: true
+---                    #<1>
+title: "Psychometric Reporting..."
+author: "...with Quarto"
+format:
+  revealjs:               #<2>
+    mouse-wheel: true     #<2>
+---
+```
+1. opening and closing fences indicated by 3 dashes (`---`)
+2. indentations tend to be important (and finicky) within your YAML
+
 :::
 
 :::
@@ -212,7 +233,7 @@ n = `r nrow(psych::bfi)` [({{< iconify mdi:arrow-left-bold >}} pssstt {{< iconif
 
 ::: {.column width="55%" .fragment fragment-index=5}
 
-```{r}
+````{r}
 #| echo: true
 ---
 title: "SCSU 2025 Psychometrics Report"
@@ -233,6 +254,13 @@ execute:
 #bibliography: bib.bib
 #csl: apa7.csl
 ---
+
+```{r, setup}
+#| output: false
+
+options(repos = "https://cloud.r-project.org") ## b/c Quarto
+install.packages("psych")  ## access bfi data & alpha function
+```
 
 # Introduction
 ::: {style="overflow: auto;"}
@@ -260,7 +288,7 @@ This report summarizes responses from...
 ## Limitations
 
 # References
-```
+````
 1. Choose [any color](https://htmlcolorcodes.com/color-picker/) you like {{< iconify emojione:rainbow >}}
 2. Either enter static date or allow {{< iconify devicon:r >}} to auto--update to "whenever you last ran this script" with `date: today`
 3. You can either customize however you like or choose from [25 built--in themes](https://quarto.org/docs/output-formats/html-themes.html)
@@ -402,7 +430,7 @@ knitr::kable(table[,c(2,3,4,8,9,11,12)])
 
 ### Sections
 
-Look at line #34 in your .qmd {{< iconify fluent-emoji-flat:eyes >}}  
+Look at line #41 in your .qmd {{< iconify fluent-emoji-flat:eyes >}}  
 
 + `{#sec-people}` is a **tag** with a [special prefix](https://quarto.org/docs/authoring/cross-references.html#overview)
 

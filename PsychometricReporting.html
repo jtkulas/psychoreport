@@ -261,11 +261,11 @@
       }</style></aside>
 </section>
 <section id="types-of-report-content" class="slide level2">
-<h2>2 Types of Report Content</h2>
-<div class="columns">
-<div class="column fragment semi-fade-out" data-fragment-index="1" style="width:50%;">
-<h3 id="narrative">Narrative:</h3>
-<p><u><strong>plain–text</strong></u> = written in prose (same as any word processor) with formatting indicated by <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown</a><sup>1</sup>:</p>
+<h2>3 Types of Report Content:</h2>
+<div class="columns smaller">
+<div class="column fragment semi-fade-out" data-fragment-index="1" style="width:33%;">
+<h3 id="narrative">Narrative</h3>
+<p><u><strong>plain–text</strong></u> (as you would specify on a notepad <iconify-icon role="img" inline="" icon="streamline-ultimate-color:paper-write" aria-label="Icon paper-write from streamline-ultimate-color Iconify.design set." title="Icon paper-write from streamline-ultimate-color Iconify.design set."></iconify-icon>) with formatting indicated by <a href="https://quarto.org/docs/authoring/markdown-basics.html">markdown</a><sup>1</sup>:</p>
 <pre><code># 1^st^ level heading 
 
 ## 2^nd^ level Heading
@@ -273,9 +273,9 @@
 this is **bold**
 this is *italic*
 </code></pre>
-</div><div class="column fragment fade-in" data-fragment-index="1" style="width:50%;">
-<h3 id="chunks">Computational:</h3>
-<p>occurs in <u><strong>chunks</strong></u> – isolated bits of code indicated with either one (<a href="https://quarto.org/docs/computations/inline-code.html">inline</a>) or three (<a href="https://quarto.org/docs/output-formats/html-code.html">code block</a>) “ticks”:</p>
+</div><div class="column fragment fade-in-then-semi-out" data-fragment-index="1" style="width:34%;">
+<h3 id="chunks">Computations</h3>
+<p>isolated bits of code indicated with either one (<a href="https://quarto.org/docs/computations/inline-code.html">inline</a>) or three (<a href="https://quarto.org/docs/output-formats/html-code.html">code block</a>) “ticks”:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-2"><pre class="sourceCode numberSource markdown code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode markdown"><span id="annotated-cell-2-1"><a href="#annotated-cell-2-1"></a><span class="in">```{r}</span></span>
 <button class="code-annotation-anchor" data-target-cell="annotated-cell-2" data-target-annotation="1">1</button><span id="annotated-cell-2-2" class="code-annotation-target"><a href="#annotated-cell-2-2"></a><span class="fu">library</span>(ggplot2)</span>
@@ -294,6 +294,30 @@ this is *italic*
 <dt data-target-cell="annotated-cell-2" data-target-annotation="2">2</dt>
 <dd>
 <span data-code-cell="annotated-cell-2" data-code-lines="4" data-code-annotation="2">comments<iconify-icon role="img" inline="" icon="ant-design:comment-outlined" aria-label="Icon comment-outlined from ant-design Iconify.design set." title="Icon comment-outlined from ant-design Iconify.design set."></iconify-icon> also operational within code chunks</span>
+</dd>
+</dl>
+</div>
+</div>
+</div><div class="column fragment fade-in" data-fragment-index="2" style="width:33%;">
+<h3 id="yaml">YAML</h3>
+<p>“executive” specifications that control the look and feel of your document – always located at very top:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-3"><pre class="sourceCode numberSource yaml code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode yaml"><button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="1">1</button><span id="annotated-cell-3-1" class="code-annotation-target"><a href="#annotated-cell-3-1"></a><span class="pp">---</span></span>
+<span id="annotated-cell-3-2"><a href="#annotated-cell-3-2"></a><span class="fu">title</span><span class="kw">:</span><span class="at"> </span><span class="st">"Psychometric Reporting..."</span></span>
+<span id="annotated-cell-3-3"><a href="#annotated-cell-3-3"></a><span class="fu">author</span><span class="kw">:</span><span class="at"> </span><span class="st">"...with Quarto"</span></span>
+<span id="annotated-cell-3-4"><a href="#annotated-cell-3-4"></a><span class="fu">format</span><span class="kw">:</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-3" data-target-annotation="2">2</button><span id="annotated-cell-3-5" class="code-annotation-target"><a href="#annotated-cell-3-5"></a><span class="at">  </span><span class="fu">revealjs</span><span class="kw">:</span></span>
+<span id="annotated-cell-3-6"><a href="#annotated-cell-3-6"></a><span class="at">    </span><span class="fu">mouse-wheel</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span>
+<span id="annotated-cell-3-7"><a href="#annotated-cell-3-7"></a><span class="pp">---</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-hidden code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-3" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="1" data-code-annotation="1">opening and closing fences indicated by 3 dashes (<code>---</code>)</span>
+</dd>
+<dt data-target-cell="annotated-cell-3" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-3" data-code-lines="5,6" data-code-annotation="2">indentations tend to be important (and finicky) within your YAML</span>
 </dd>
 </dl>
 </div>
@@ -385,69 +409,76 @@ age                                     age in years                &lt;NA&gt;  
 <span class="fragment" data-fragment-index="5">3. Use clipboard (<iconify-icon role="img" inline="" icon="streamline:empty-clipboard" aria-label="Icon empty-clipboard from streamline Iconify.design set." title="Icon empty-clipboard from streamline Iconify.design set."></iconify-icon>) to replace content &amp; re–render</span></p>
 </div><div class="column fragment" data-fragment-index="5" style="width:55%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-4"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-4-1"><a href="#annotated-cell-4-1"></a><span class="sc">---</span></span>
-<span id="annotated-cell-4-2"><a href="#annotated-cell-4-2"></a>title<span class="sc">:</span> <span class="st">"SCSU 2025 Psychometrics Report"</span></span>
-<span id="annotated-cell-4-3"><a href="#annotated-cell-4-3"></a>author<span class="sc">:</span> <span class="st">"I.M. Ah--sum"</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="1">1</button><span id="annotated-cell-4-4" class="code-annotation-target"><a href="#annotated-cell-4-4"></a>title<span class="sc">-</span>block<span class="sc">-</span>banner<span class="sc">:</span> <span class="st">"#4caad8"</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="2">2</button><span id="annotated-cell-4-5" class="code-annotation-target"><a href="#annotated-cell-4-5"></a>date<span class="sc">:</span> today</span>
-<span id="annotated-cell-4-6"><a href="#annotated-cell-4-6"></a>format<span class="sc">:</span> </span>
-<span id="annotated-cell-4-7"><a href="#annotated-cell-4-7"></a>  html<span class="sc">:</span></span>
-<span id="annotated-cell-4-8"><a href="#annotated-cell-4-8"></a>    theme<span class="sc">:</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="3">3</button><span id="annotated-cell-4-9" class="code-annotation-target"><a href="#annotated-cell-4-9"></a>      light<span class="sc">:</span> default</span>
-<span id="annotated-cell-4-10"><a href="#annotated-cell-4-10"></a>      dark<span class="sc">:</span> darkly</span>
-<span id="annotated-cell-4-11"><a href="#annotated-cell-4-11"></a>toc<span class="sc">:</span> true</span>
-<span id="annotated-cell-4-12"><a href="#annotated-cell-4-12"></a>toc<span class="sc">-</span>location<span class="sc">:</span> left</span>
-<span id="annotated-cell-4-13"><a href="#annotated-cell-4-13"></a>execute<span class="sc">:</span></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-4" data-target-annotation="4">4</button><span id="annotated-cell-4-14" class="code-annotation-target"><a href="#annotated-cell-4-14"></a>  echo<span class="sc">:</span> false</span>
-<span id="annotated-cell-4-15"><a href="#annotated-cell-4-15"></a>  warning<span class="sc">:</span> false</span>
-<span id="annotated-cell-4-16"><a href="#annotated-cell-4-16"></a>  message<span class="sc">:</span> false</span>
-<span id="annotated-cell-4-17"><a href="#annotated-cell-4-17"></a><span class="co">#bibliography: bib.bib</span></span>
-<span id="annotated-cell-4-18"><a href="#annotated-cell-4-18"></a><span class="co">#csl: apa7.csl</span></span>
-<span id="annotated-cell-4-19"><a href="#annotated-cell-4-19"></a><span class="sc">---</span></span>
-<span id="annotated-cell-4-20"><a href="#annotated-cell-4-20"></a></span>
-<span id="annotated-cell-4-21"><a href="#annotated-cell-4-21"></a><span class="co"># Introduction</span></span>
-<span id="annotated-cell-4-22"><a href="#annotated-cell-4-22"></a><span class="er">:::</span> {style<span class="ot">=</span><span class="st">"overflow: auto;"</span>}</span>
-<span id="annotated-cell-4-23"><a href="#annotated-cell-4-23"></a></span>
-<span id="annotated-cell-4-24"><a href="#annotated-cell-4-24"></a>[<span class="sc">!</span>[](https<span class="sc">:</span><span class="er">//</span>www.stcloudstate.edu<span class="sc">/</span>ucomm<span class="sc">/</span>_files<span class="sc">/</span>images<span class="sc">/</span><span class="dv">300</span>x300_stc.png){style<span class="ot">=</span><span class="st">"float: right; margin-left: 1em; width: 40%;"</span>}](https<span class="sc">:</span><span class="er">//</span>www.stcloudstate.edu<span class="sc">/</span>graduate<span class="sc">/</span>io<span class="sc">-</span>psy<span class="sc">/</span>default.aspx)</span>
-<span id="annotated-cell-4-25"><a href="#annotated-cell-4-25"></a></span>
-<span id="annotated-cell-4-26"><a href="#annotated-cell-4-26"></a>This report summarizes responses from... </span>
-<span id="annotated-cell-4-27"><a href="#annotated-cell-4-27"></a></span>
-<span id="annotated-cell-4-28"><a href="#annotated-cell-4-28"></a><span class="sc">&gt;</span>Note<span class="sc">:</span> any caveats here</span>
-<span id="annotated-cell-4-29"><a href="#annotated-cell-4-29"></a></span>
-<span id="annotated-cell-4-30"><a href="#annotated-cell-4-30"></a><span class="sc">:::</span></span>
-<span id="annotated-cell-4-31"><a href="#annotated-cell-4-31"></a></span>
-<span id="annotated-cell-4-32"><a href="#annotated-cell-4-32"></a><span class="co"># Method</span></span>
-<span id="annotated-cell-4-33"><a href="#annotated-cell-4-33"></a></span>
-<span id="annotated-cell-4-34"><a href="#annotated-cell-4-34"></a><span class="do">## Participants {#sec-people}</span></span>
-<span id="annotated-cell-4-35"><a href="#annotated-cell-4-35"></a></span>
-<span id="annotated-cell-4-36"><a href="#annotated-cell-4-36"></a><span class="do">## Materials</span></span>
-<span id="annotated-cell-4-37"><a href="#annotated-cell-4-37"></a></span>
-<span id="annotated-cell-4-38"><a href="#annotated-cell-4-38"></a><span class="co"># Results</span></span>
-<span id="annotated-cell-4-39"><a href="#annotated-cell-4-39"></a></span>
-<span id="annotated-cell-4-40"><a href="#annotated-cell-4-40"></a><span class="co"># Conclusions &amp; Summary</span></span>
-<span id="annotated-cell-4-41"><a href="#annotated-cell-4-41"></a></span>
-<span id="annotated-cell-4-42"><a href="#annotated-cell-4-42"></a><span class="do">## Future considerations</span></span>
-<span id="annotated-cell-4-43"><a href="#annotated-cell-4-43"></a></span>
-<span id="annotated-cell-4-44"><a href="#annotated-cell-4-44"></a><span class="do">## Limitations</span></span>
-<span id="annotated-cell-4-45"><a href="#annotated-cell-4-45"></a></span>
-<span id="annotated-cell-4-46"><a href="#annotated-cell-4-46"></a><span class="co"># References</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1"></a><span class="sc">---</span></span>
+<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2"></a>title<span class="sc">:</span> <span class="st">"SCSU 2025 Psychometrics Report"</span></span>
+<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3"></a>author<span class="sc">:</span> <span class="st">"I.M. Ah--sum"</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-4" class="code-annotation-target"><a href="#annotated-cell-5-4"></a>title<span class="sc">-</span>block<span class="sc">-</span>banner<span class="sc">:</span> <span class="st">"#4caad8"</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2">2</button><span id="annotated-cell-5-5" class="code-annotation-target"><a href="#annotated-cell-5-5"></a>date<span class="sc">:</span> today</span>
+<span id="annotated-cell-5-6"><a href="#annotated-cell-5-6"></a>format<span class="sc">:</span> </span>
+<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7"></a>  html<span class="sc">:</span></span>
+<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8"></a>    theme<span class="sc">:</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="3">3</button><span id="annotated-cell-5-9" class="code-annotation-target"><a href="#annotated-cell-5-9"></a>      light<span class="sc">:</span> default</span>
+<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10"></a>      dark<span class="sc">:</span> darkly</span>
+<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11"></a>toc<span class="sc">:</span> true</span>
+<span id="annotated-cell-5-12"><a href="#annotated-cell-5-12"></a>toc<span class="sc">-</span>location<span class="sc">:</span> left</span>
+<span id="annotated-cell-5-13"><a href="#annotated-cell-5-13"></a>execute<span class="sc">:</span></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="4">4</button><span id="annotated-cell-5-14" class="code-annotation-target"><a href="#annotated-cell-5-14"></a>  echo<span class="sc">:</span> false</span>
+<span id="annotated-cell-5-15"><a href="#annotated-cell-5-15"></a>  warning<span class="sc">:</span> false</span>
+<span id="annotated-cell-5-16"><a href="#annotated-cell-5-16"></a>  message<span class="sc">:</span> false</span>
+<span id="annotated-cell-5-17"><a href="#annotated-cell-5-17"></a><span class="co">#bibliography: bib.bib</span></span>
+<span id="annotated-cell-5-18"><a href="#annotated-cell-5-18"></a><span class="co">#csl: apa7.csl</span></span>
+<span id="annotated-cell-5-19"><a href="#annotated-cell-5-19"></a><span class="sc">---</span></span>
+<span id="annotated-cell-5-20"><a href="#annotated-cell-5-20"></a></span>
+<span id="annotated-cell-5-21"><a href="#annotated-cell-5-21"></a><span class="st">```</span><span class="at">{r, setup}</span></span>
+<span id="annotated-cell-5-22"><a href="#annotated-cell-5-22"></a><span class="at">#| output: false</span></span>
+<span id="annotated-cell-5-23"><a href="#annotated-cell-5-23"></a></span>
+<span id="annotated-cell-5-24"><a href="#annotated-cell-5-24"></a><span class="at">options(repos = "https://cloud.r-project.org") ## b/c Quarto</span></span>
+<span id="annotated-cell-5-25"><a href="#annotated-cell-5-25"></a><span class="at">install.packages("psych")  ## access bfi data &amp; alpha function</span></span>
+<span id="annotated-cell-5-26"><a href="#annotated-cell-5-26"></a><span class="st">```</span></span>
+<span id="annotated-cell-5-27"><a href="#annotated-cell-5-27"></a></span>
+<span id="annotated-cell-5-28"><a href="#annotated-cell-5-28"></a><span class="co"># Introduction</span></span>
+<span id="annotated-cell-5-29"><a href="#annotated-cell-5-29"></a><span class="sc">:::</span> {style<span class="ot">=</span><span class="st">"overflow: auto;"</span>}</span>
+<span id="annotated-cell-5-30"><a href="#annotated-cell-5-30"></a></span>
+<span id="annotated-cell-5-31"><a href="#annotated-cell-5-31"></a>[<span class="sc">!</span>[](https<span class="sc">:</span><span class="er">//</span>www.stcloudstate.edu<span class="sc">/</span>ucomm<span class="sc">/</span>_files<span class="sc">/</span>images<span class="sc">/</span><span class="dv">300</span>x300_stc.png){style<span class="ot">=</span><span class="st">"float: right; margin-left: 1em; width: 40%;"</span>}](https<span class="sc">:</span><span class="er">//</span>www.stcloudstate.edu<span class="sc">/</span>graduate<span class="sc">/</span>io<span class="sc">-</span>psy<span class="sc">/</span>default.aspx)</span>
+<span id="annotated-cell-5-32"><a href="#annotated-cell-5-32"></a></span>
+<span id="annotated-cell-5-33"><a href="#annotated-cell-5-33"></a>This report summarizes responses from... </span>
+<span id="annotated-cell-5-34"><a href="#annotated-cell-5-34"></a></span>
+<span id="annotated-cell-5-35"><a href="#annotated-cell-5-35"></a><span class="sc">&gt;</span>Note<span class="sc">:</span> any caveats here</span>
+<span id="annotated-cell-5-36"><a href="#annotated-cell-5-36"></a></span>
+<span id="annotated-cell-5-37"><a href="#annotated-cell-5-37"></a><span class="sc">:::</span></span>
+<span id="annotated-cell-5-38"><a href="#annotated-cell-5-38"></a></span>
+<span id="annotated-cell-5-39"><a href="#annotated-cell-5-39"></a><span class="co"># Method</span></span>
+<span id="annotated-cell-5-40"><a href="#annotated-cell-5-40"></a></span>
+<span id="annotated-cell-5-41"><a href="#annotated-cell-5-41"></a><span class="do">## Participants {#sec-people}</span></span>
+<span id="annotated-cell-5-42"><a href="#annotated-cell-5-42"></a></span>
+<span id="annotated-cell-5-43"><a href="#annotated-cell-5-43"></a><span class="do">## Materials</span></span>
+<span id="annotated-cell-5-44"><a href="#annotated-cell-5-44"></a></span>
+<span id="annotated-cell-5-45"><a href="#annotated-cell-5-45"></a><span class="co"># Results</span></span>
+<span id="annotated-cell-5-46"><a href="#annotated-cell-5-46"></a></span>
+<span id="annotated-cell-5-47"><a href="#annotated-cell-5-47"></a><span class="co"># Conclusions &amp; Summary</span></span>
+<span id="annotated-cell-5-48"><a href="#annotated-cell-5-48"></a></span>
+<span id="annotated-cell-5-49"><a href="#annotated-cell-5-49"></a><span class="do">## Future considerations</span></span>
+<span id="annotated-cell-5-50"><a href="#annotated-cell-5-50"></a></span>
+<span id="annotated-cell-5-51"><a href="#annotated-cell-5-51"></a><span class="do">## Limitations</span></span>
+<span id="annotated-cell-5-52"><a href="#annotated-cell-5-52"></a></span>
+<span id="annotated-cell-5-53"><a href="#annotated-cell-5-53"></a><span class="co"># References</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-4" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="4" data-code-annotation="1">Choose <a href="https://htmlcolorcodes.com/color-picker/">any color</a> you like <iconify-icon role="img" inline="" icon="emojione:rainbow" aria-label="Icon rainbow from emojione Iconify.design set." title="Icon rainbow from emojione Iconify.design set."></iconify-icon></span>
+<span data-code-cell="annotated-cell-5" data-code-lines="4" data-code-annotation="1">Choose <a href="https://htmlcolorcodes.com/color-picker/">any color</a> you like <iconify-icon role="img" inline="" icon="emojione:rainbow" aria-label="Icon rainbow from emojione Iconify.design set." title="Icon rainbow from emojione Iconify.design set."></iconify-icon></span>
 </dd>
-<dt data-target-cell="annotated-cell-4" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="5" data-code-annotation="2">Either enter static date or allow <iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> to auto–update to “whenever you last ran this script” with <code>date: today</code></span>
+<span data-code-cell="annotated-cell-5" data-code-lines="5" data-code-annotation="2">Either enter static date or allow <iconify-icon role="img" inline="" icon="devicon:r" aria-label="Icon r from devicon Iconify.design set." title="Icon r from devicon Iconify.design set."></iconify-icon> to auto–update to “whenever you last ran this script” with <code>date: today</code></span>
 </dd>
-<dt data-target-cell="annotated-cell-4" data-target-annotation="3">3</dt>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="3">3</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="9,10" data-code-annotation="3">You can either customize however you like or choose from <a href="https://quarto.org/docs/output-formats/html-themes.html">25 built–in themes</a></span>
+<span data-code-cell="annotated-cell-5" data-code-lines="9,10" data-code-annotation="3">You can either customize however you like or choose from <a href="https://quarto.org/docs/output-formats/html-themes.html">25 built–in themes</a></span>
 </dd>
-<dt data-target-cell="annotated-cell-4" data-target-annotation="4">4</dt>
+<dt data-target-cell="annotated-cell-5" data-target-annotation="4">4</dt>
 <dd>
-<span data-code-cell="annotated-cell-4" data-code-lines="14,16" data-code-annotation="4">Controls chunk reporting activity – helps keep report “clean” (you can toggle to recieve feedback when you want it)</span>
+<span data-code-cell="annotated-cell-5" data-code-lines="14,16" data-code-annotation="4">Controls chunk reporting activity – helps keep report “clean” (you can toggle to recieve feedback when you want it)</span>
 </dd>
 </dl>
 </div>
@@ -485,28 +516,28 @@ age                                     age in years                &lt;NA&gt;  
 </ol>
 </div><div class="column" style="width:45%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-5"><pre class="sourceCode numberSource markdown code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode markdown"><span id="annotated-cell-5-1"><a href="#annotated-cell-5-1"></a><span class="in">```{r}</span></span>
-<span id="annotated-cell-5-2"><a href="#annotated-cell-5-2"></a><span class="fu">library</span>(psych)</span>
-<span id="annotated-cell-5-3"><a href="#annotated-cell-5-3"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="1">1</button><span id="annotated-cell-5-4" class="code-annotation-target"><a href="#annotated-cell-5-4"></a>bfi<span class="sc">$</span>A1 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span>bfi<span class="sc">$</span>A1</span>
-<span id="annotated-cell-5-5"><a href="#annotated-cell-5-5"></a></span>
-<button class="code-annotation-anchor" data-target-cell="annotated-cell-5" data-target-annotation="2">2</button><span id="annotated-cell-5-6" class="code-annotation-target"><a href="#annotated-cell-5-6"></a>agree <span class="ot">&lt;-</span> <span class="fu">alpha</span>(bfi[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>])</span>
-<span id="annotated-cell-5-7"><a href="#annotated-cell-5-7"></a></span>
-<span id="annotated-cell-5-8"><a href="#annotated-cell-5-8"></a><span class="do">## Chronbach's stored in</span></span>
-<span id="annotated-cell-5-9"><a href="#annotated-cell-5-9"></a><span class="do">## agree$total</span></span>
-<span id="annotated-cell-5-10"><a href="#annotated-cell-5-10"></a></span>
-<span id="annotated-cell-5-11"><a href="#annotated-cell-5-11"></a><span class="do">## request by typing:</span></span>
-<span id="annotated-cell-5-12"><a href="#annotated-cell-5-12"></a><span class="do">## `r agree$total$raw_alpha`</span></span>
-<span id="annotated-cell-5-13"><a href="#annotated-cell-5-13"></a><span class="in">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-6"><pre class="sourceCode numberSource markdown code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode markdown"><span id="annotated-cell-6-1"><a href="#annotated-cell-6-1"></a><span class="in">```{r}</span></span>
+<span id="annotated-cell-6-2"><a href="#annotated-cell-6-2"></a><span class="fu">library</span>(psych)</span>
+<span id="annotated-cell-6-3"><a href="#annotated-cell-6-3"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="1">1</button><span id="annotated-cell-6-4" class="code-annotation-target"><a href="#annotated-cell-6-4"></a>bfi<span class="sc">$</span>A1 <span class="ot">&lt;-</span> <span class="dv">7</span><span class="sc">-</span>bfi<span class="sc">$</span>A1</span>
+<span id="annotated-cell-6-5"><a href="#annotated-cell-6-5"></a></span>
+<button class="code-annotation-anchor" data-target-cell="annotated-cell-6" data-target-annotation="2">2</button><span id="annotated-cell-6-6" class="code-annotation-target"><a href="#annotated-cell-6-6"></a>agree <span class="ot">&lt;-</span> <span class="fu">alpha</span>(bfi[<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>])</span>
+<span id="annotated-cell-6-7"><a href="#annotated-cell-6-7"></a></span>
+<span id="annotated-cell-6-8"><a href="#annotated-cell-6-8"></a><span class="do">## Chronbach's stored in</span></span>
+<span id="annotated-cell-6-9"><a href="#annotated-cell-6-9"></a><span class="do">## agree$total</span></span>
+<span id="annotated-cell-6-10"><a href="#annotated-cell-6-10"></a></span>
+<span id="annotated-cell-6-11"><a href="#annotated-cell-6-11"></a><span class="do">## request by typing:</span></span>
+<span id="annotated-cell-6-12"><a href="#annotated-cell-6-12"></a><span class="do">## `r agree$total$raw_alpha`</span></span>
+<span id="annotated-cell-6-13"><a href="#annotated-cell-6-13"></a><span class="in">```</span></span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-5" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="4" data-code-annotation="1">Reflecting <code>A1</code> as indicated on <a href="#/example">scoring key</a></span>
+<span data-code-cell="annotated-cell-6" data-code-lines="4" data-code-annotation="1">Reflecting <code>A1</code> as indicated on <a href="#/example">scoring key</a></span>
 </dd>
-<dt data-target-cell="annotated-cell-5" data-target-annotation="2">2</dt>
+<dt data-target-cell="annotated-cell-6" data-target-annotation="2">2</dt>
 <dd>
-<span data-code-cell="annotated-cell-5" data-code-lines="6" data-code-annotation="2">Indexing quickest way to subset, but be careful (make sure to check output, even if you don’t eventually include in report)</span>
+<span data-code-cell="annotated-cell-6" data-code-lines="6" data-code-annotation="2">Indexing quickest way to subset, but be careful (make sure to check output, even if you don’t eventually include in report)</span>
 </dd>
 </dl>
 </div>
@@ -590,7 +621,7 @@ age                                     age in years                &lt;NA&gt;  
 <div class="columns">
 <div class="column fragment" data-fragment-index="1" style="width:50%;">
 <h3 id="sections">Sections</h3>
-<p>Look at line #34 in your .qmd <iconify-icon role="img" inline="" icon="fluent-emoji-flat:eyes" aria-label="Icon eyes from fluent-emoji-flat Iconify.design set." title="Icon eyes from fluent-emoji-flat Iconify.design set."></iconify-icon></p>
+<p>Look at line #41 in your .qmd <iconify-icon role="img" inline="" icon="fluent-emoji-flat:eyes" aria-label="Icon eyes from fluent-emoji-flat Iconify.design set." title="Icon eyes from fluent-emoji-flat Iconify.design set."></iconify-icon></p>
 <ul>
 <li><code>{#sec-people}</code> is a <strong>tag</strong> with a <a href="https://quarto.org/docs/authoring/cross-references.html#overview">special prefix</a></li>
 </ul>
@@ -632,21 +663,21 @@ age                                     age in years                &lt;NA&gt;  
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-10"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-10" data-target-annotation="1">1</button><span id="annotated-cell-10-1" class="code-annotation-target"><a href="#annotated-cell-10-1"></a><span class="sc">@</span>article{young2021analysis,</span>
-<span id="annotated-cell-10-2"><a href="#annotated-cell-10-2"></a>  title<span class="ot">=</span>{An analysis of training and vocational rehabilitation services <span class="cf">for</span> individuals with intellectual disability},</span>
-<span id="annotated-cell-10-3"><a href="#annotated-cell-10-3"></a>  author<span class="ot">=</span>{Young Illies, Marcy and Valentini, Brian J and Ingles, Kristina E and Gilson, Carly B},</span>
-<span id="annotated-cell-10-4"><a href="#annotated-cell-10-4"></a>  journal<span class="ot">=</span>{Journal of Vocational Rehabilitation},</span>
-<span id="annotated-cell-10-5"><a href="#annotated-cell-10-5"></a>  volume<span class="ot">=</span>{<span class="dv">55</span>},</span>
-<span id="annotated-cell-10-6"><a href="#annotated-cell-10-6"></a>  number<span class="ot">=</span>{<span class="dv">2</span>},</span>
-<span id="annotated-cell-10-7"><a href="#annotated-cell-10-7"></a>  pages<span class="ot">=</span>{<span class="dv">219</span><span class="sc">--</span><span class="dv">225</span>},</span>
-<span id="annotated-cell-10-8"><a href="#annotated-cell-10-8"></a>  year<span class="ot">=</span>{<span class="dv">2021</span>},</span>
-<span id="annotated-cell-10-9"><a href="#annotated-cell-10-9"></a>  publisher<span class="ot">=</span>{SAGE Publications Sage UK<span class="sc">:</span> London, England}</span>
-<span id="annotated-cell-10-10"><a href="#annotated-cell-10-10"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="annotated-cell-11"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><button class="code-annotation-anchor" data-target-cell="annotated-cell-11" data-target-annotation="1">1</button><span id="annotated-cell-11-1" class="code-annotation-target"><a href="#annotated-cell-11-1"></a><span class="sc">@</span>article{young2021analysis,</span>
+<span id="annotated-cell-11-2"><a href="#annotated-cell-11-2"></a>  title<span class="ot">=</span>{An analysis of training and vocational rehabilitation services <span class="cf">for</span> individuals with intellectual disability},</span>
+<span id="annotated-cell-11-3"><a href="#annotated-cell-11-3"></a>  author<span class="ot">=</span>{Young Illies, Marcy and Valentini, Brian J and Ingles, Kristina E and Gilson, Carly B},</span>
+<span id="annotated-cell-11-4"><a href="#annotated-cell-11-4"></a>  journal<span class="ot">=</span>{Journal of Vocational Rehabilitation},</span>
+<span id="annotated-cell-11-5"><a href="#annotated-cell-11-5"></a>  volume<span class="ot">=</span>{<span class="dv">55</span>},</span>
+<span id="annotated-cell-11-6"><a href="#annotated-cell-11-6"></a>  number<span class="ot">=</span>{<span class="dv">2</span>},</span>
+<span id="annotated-cell-11-7"><a href="#annotated-cell-11-7"></a>  pages<span class="ot">=</span>{<span class="dv">219</span><span class="sc">--</span><span class="dv">225</span>},</span>
+<span id="annotated-cell-11-8"><a href="#annotated-cell-11-8"></a>  year<span class="ot">=</span>{<span class="dv">2021</span>},</span>
+<span id="annotated-cell-11-9"><a href="#annotated-cell-11-9"></a>  publisher<span class="ot">=</span>{SAGE Publications Sage UK<span class="sc">:</span> London, England}</span>
+<span id="annotated-cell-11-10"><a href="#annotated-cell-11-10"></a>}</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-annotation">
 <dl class="code-annotation-container-hidden code-annotation-container-grid">
-<dt data-target-cell="annotated-cell-10" data-target-annotation="1">1</dt>
+<dt data-target-cell="annotated-cell-11" data-target-annotation="1">1</dt>
 <dd>
-<span data-code-cell="annotated-cell-10" data-code-lines="1" data-code-annotation="1">The “key” is how you identify the reference within your report. Here, <iconify-icon role="img" inline="" icon="noto:key" aria-label="Icon key from noto Iconify.design set." title="Icon key from noto Iconify.design set."></iconify-icon> = <code>young2021analysis</code>. Like <a href="#/crossref">cross–references</a>, you precede the citation key with the <iconify-icon role="img" inline="" icon="fa-solid:at" aria-label="Icon at from fa-solid Iconify.design set." title="Icon at from fa-solid Iconify.design set."></iconify-icon> symbol when referencing.</span>
+<span data-code-cell="annotated-cell-11" data-code-lines="1" data-code-annotation="1">The “key” is how you identify the reference within your report. Here, <iconify-icon role="img" inline="" icon="noto:key" aria-label="Icon key from noto Iconify.design set." title="Icon key from noto Iconify.design set."></iconify-icon> = <code>young2021analysis</code>. Like <a href="#/crossref">cross–references</a>, you precede the citation key with the <iconify-icon role="img" inline="" icon="fa-solid:at" aria-label="Icon at from fa-solid Iconify.design set." title="Icon at from fa-solid Iconify.design set."></iconify-icon> symbol when referencing.</span>
 </dd>
 </dl>
 </div>
