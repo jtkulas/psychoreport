@@ -221,13 +221,13 @@ n = `r nrow(psych::bfi)` [({{< iconify mdi:arrow-left-bold >}} pssstt {{< iconif
 
 ::: {.columns}
 
-::: {.column width="45%" .smaller}
+::: {.column width="45%" .Smaller}
 
 1. Create a boilerplate Quarto html document:  
     + `File`{{< iconify maki:arrow >}}`New File`[{{< iconify maki:arrow >}}`Quarto Document`]{.fragment fragment-index=1}[{{< iconify maki:arrow >}}`HTML`{{< iconify maki:arrow >}}`Create`]{.fragment fragment-index=2}  
 
-[2. Verify everything "works" -- render/save within project folder]{.fragment fragment-index=3}  
-[3. Use clipboard ({{< iconify streamline:empty-clipboard >}}) to replace content & re--render]{.fragment fragment-index=5}
+[2. Verify everything "works" -- Render within project folder (choose `File name` & `Save` when prompted)]{.fragment fragment-index=3}  
+[3. Use clipboard ({{< iconify streamline:empty-clipboard >}}) to replace content & re--Render]{.fragment fragment-index=5}
 
 :::
 
@@ -298,12 +298,30 @@ This report summarizes responses from...
 
 :::
 
-![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="-20" left="360" width="200" .fragment fragment-index=5}
+![](https://static.vecteezy.com/system/resources/previews/014/391/900/non_2x/right-arrow-curved-icon-isolated-on-transparent-background-free-png.png){.absolute bottom="10" left="350" width="200" .fragment fragment-index=5}
 
 [![](img/file1.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-out fragment-index=1}
 [![](img/file2.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=1}
 [![](img/file3.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=2}
 [![](img/file4.png){.absolute right="-160" top="100" height="500"}]{.fragment .fade-in-then-out fragment-index=3}
+
+## Confirmation...
+
+::: {.columns}
+
+::: {.column width="30%"}
+
+...if everything "worked", you should have a template report that looks similar to the one reported here:
+:::
+
+::: {.column width="70%"}
+
+<iframe src="https://bookdown.org/jtkulas/template/template.html" width=800px height=600px>
+</iframe>
+
+:::
+
+:::
 
 ## Build Component Status: [{{< iconify fa7-solid:battery-0 style="color:#78eb7b" >}}]{.fragment fragment-index=1}
 

@@ -1,0 +1,53 @@
+---
+title: "SCSU 2025 Psychometrics Report"
+author: "I.M. Ah--sum"
+title-block-banner: "#4caad8"
+date: today
+format: 
+  html:
+    theme:
+      light: default
+      dark: darkly
+toc: true
+toc-location: left
+execute:
+  echo: false
+  warning: false
+  message: false
+#bibliography: bib.bib
+#csl: apa7.csl
+---
+
+```{r, setup}
+#| output: false
+
+options(repos = "https://cloud.r-project.org") ## b/c Quarto
+install.packages("psych")  ## access bfi data & alpha function
+```
+
+# Introduction
+::: {style="overflow: auto;"}
+
+[![](https://www.stcloudstate.edu/ucomm/_files/images/300x300_stc.png){style="float: right; margin-left: 1em; width: 40%;"}](https://www.stcloudstate.edu/graduate/io-psy/default.aspx)
+
+This report summarizes responses from... 
+
+>Note: any caveats here
+
+:::
+
+# Method
+
+## Participants {#sec-people}
+
+## Materials
+
+# Results
+
+# Conclusions & Summary
+
+## Future considerations
+
+## Limitations
+
+# References
